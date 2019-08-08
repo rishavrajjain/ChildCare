@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
 
             children: <Widget>[
               IconButton(
-                icon: Icon(Icons.local_car_wash),
+                icon: Icon(Icons.arrow_back),
                 iconSize: 50,
                 color: Colors.white,
                 onPressed: _logoutUser,
