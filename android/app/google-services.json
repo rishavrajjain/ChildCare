@@ -1,0 +1,48 @@
+{
+    "project_info": {
+      "project_number": "1072426649712",
+      "firebase_url": "https://fir-course-c8afa.firebaseio.com",
+      "project_id": "fir-course-c8afa",
+      "storage_bucket": "fir-course-c8afa.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:1072426649712:android:a9770a5774eb983d",
+          "android_client_info": {
+            "package_name": "com.example.first_screen"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "1072426649712-9svfd3k17dpv81j8f1n3k9nd6kvln1va.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.example.first_screen",
+              "certificate_hash": "df40f1d94d69946a7ca8eedb57be9a8a3fd16460"
+            }
+          },
+          {
+            "client_id": "1072426649712-pc4t4t6cg1fktdi8msfbdejvuk36gdi8.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyC-AkfFNUzJTQ252kZyTXeAifxfTSLAYog"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "1072426649712-pc4t4t6cg1fktdi8msfbdejvuk36gdi8.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
