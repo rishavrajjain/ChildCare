@@ -124,7 +124,7 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
         key: formKey,
         child: Column(
         children: <Widget>[
-          Image.file(sampleImage,height: 330,width: 630,),
+          Image.file(sampleImage,height: 330,width: 390,),
 
           SizedBox(height: 15,),
           TextFormField(
