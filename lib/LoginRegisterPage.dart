@@ -109,15 +109,30 @@ void validateAndSubmit() async
       appBar: AppBar(
         title: Text('On Care'),
       ),
-      body: Container(
-        margin: EdgeInsets.all(15),
-        child: Form(
+      body: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          new Image(fit: BoxFit.cover,image: AssetImage("assets/walking.jpg"),color: Colors.black87,colorBlendMode: BlendMode.darken,),
+          SingleChildScrollView(child:Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+           SizedBox(height: 10,), 
+          logo(),
+          Form(
+          
           key: formKey,
-          child: Column(
+          child: Container(
+            padding: const EdgeInsets.all(30),
+            child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: createInputs()+createButtons(),
           ),
+          ),
         )
+        ],
+        
+      ),)
+        ],
       )
     );
   }
@@ -126,9 +141,8 @@ void validateAndSubmit() async
   List<Widget> createInputs()
   {
     return [
-      SizedBox(height: 10,), 
-      logo(),
-      SizedBox(height: 20,),
+     
+      
 
       new TextFormField(
         decoration: InputDecoration(labelText: 'Email'),
@@ -165,7 +179,7 @@ void validateAndSubmit() async
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
         radius: 110,
-        child: Image.asset('assets/walking.jpg'),
+        child: FlutterLogo(size: 100,),
       
       )
     );
@@ -178,7 +192,7 @@ void validateAndSubmit() async
     {
       return [
       
-      new RaisedButton(
+      new MaterialButton(
         child: Text("Login",style: TextStyle(fontSize: 20),),
         textColor: Colors.white,
         color: Colors.pink,
