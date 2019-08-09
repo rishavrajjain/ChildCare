@@ -123,7 +123,7 @@ void validateAndSubmit() async
           key: formKey,
           child: Theme(
             data: ThemeData(brightness: Brightness.dark,inputDecorationTheme: InputDecorationTheme(
-              labelStyle: TextStyle(color: Colors.pink,fontSize: 20)
+              labelStyle: TextStyle(color: Colors.white,fontSize: 20)
             )),
 
                       child: Container(
@@ -152,7 +152,7 @@ void validateAndSubmit() async
 
       new TextFormField(
         decoration: InputDecoration(labelText: 'Email',enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.pink),   
+                      borderSide: BorderSide(color: Colors.white),   
                       ),  
               focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.pink),
@@ -167,7 +167,7 @@ void validateAndSubmit() async
       SizedBox(height: 10,),
       new TextFormField(
         decoration: InputDecoration(labelText: 'Password',enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.pink),   
+                      borderSide: BorderSide(color: Colors.white),   
                       ),  
               focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.pink),

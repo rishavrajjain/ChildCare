@@ -119,14 +119,14 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
   Widget enableUpload(){
 
     return new Container(
-      
+      padding: const EdgeInsets.fromLTRB(30,10,30,30),
       child: Form(
         key: formKey,
-        child: Column(
+        child:   SingleChildScrollView(child:Column(
         children: <Widget>[
           Image.file(sampleImage,height: 330,width: 390,),
 
-          SizedBox(height: 15,),
+          //SizedBox(height: 15,),
           TextFormField(
             decoration: InputDecoration(labelText: 'Description'),
             validator: (value){
@@ -153,7 +153,7 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
 
 
         ],
-      ),
+      ),),
       ),
     );
 
