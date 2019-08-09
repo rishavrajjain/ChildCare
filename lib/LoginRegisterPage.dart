@@ -105,14 +105,14 @@ void validateAndSubmit() async
   //Design
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(/*
       appBar: AppBar(
         title: Text('On Care'),
-      ),
+      ),*/
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          new Image(fit: BoxFit.cover,image: AssetImage("assets/walking.jpg"),color: Colors.black87,colorBlendMode: BlendMode.darken,),
+          new Image(fit: BoxFit.cover,image: AssetImage('assets/walking.jpg'),color: Colors.black45,colorBlendMode: BlendMode.darken,),
           SingleChildScrollView(child:Column(
             mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -121,12 +121,18 @@ void validateAndSubmit() async
           Form(
           
           key: formKey,
-          child: Container(
-            padding: const EdgeInsets.all(30),
-            child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: createInputs()+createButtons(),
-          ),
+          child: Theme(
+            data: ThemeData(brightness: Brightness.dark,inputDecorationTheme: InputDecorationTheme(
+              labelStyle: TextStyle(color: Colors.pink,fontSize: 20)
+            )),
+
+                      child: Container(
+              padding: const EdgeInsets.all(30),
+              child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: createInputs()+createButtons(),
+            ),
+            ),
           ),
         )
         ],
@@ -145,7 +151,12 @@ void validateAndSubmit() async
       
 
       new TextFormField(
-        decoration: InputDecoration(labelText: 'Email'),
+        decoration: InputDecoration(labelText: 'Email',enabledBorder: UnderlineInputBorder(      
+                      borderSide: BorderSide(color: Colors.pink),   
+                      ),  
+              focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.pink),
+                   ),  ),
         validator: (value){
           return value.isEmpty ? 'Email is required.' : null;
         },
@@ -155,7 +166,12 @@ void validateAndSubmit() async
       ),
       SizedBox(height: 10,),
       new TextFormField(
-        decoration: InputDecoration(labelText: 'Password'),
+        decoration: InputDecoration(labelText: 'Password',enabledBorder: UnderlineInputBorder(      
+                      borderSide: BorderSide(color: Colors.pink),   
+                      ),  
+              focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.pink),
+                   ),  ),
         obscureText: true,
         validator: (value){
           return value.isEmpty ? 'Password is required.' : null;
@@ -179,7 +195,7 @@ void validateAndSubmit() async
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
         radius: 110,
-        child: FlutterLogo(size: 100,),
+        child: FlutterLogo(size: 120,),
       
       )
     );
@@ -201,7 +217,7 @@ void validateAndSubmit() async
 
       new FlatButton(
         child: Text("Not have an account? Create Account?",style: TextStyle(fontSize: 14),),
-        textColor: Colors.red,
+        textColor: Colors.white,
         onPressed: moveToRegister,
         
       ),
@@ -222,7 +238,7 @@ void validateAndSubmit() async
 
       new FlatButton(
         child: Text("Already have an Account? Login.",style: TextStyle(fontSize: 14),),
-        textColor: Colors.red,
+        textColor: Colors.white,
         onPressed: moveToLogin,
         
       ),
