@@ -128,6 +128,8 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
 
           //SizedBox(height: 15,),
           TextFormField(
+            keyboardType: TextInputType.multiline,
+            maxLines: null,
             decoration: InputDecoration(labelText: 'Description'),
             validator: (value){
               return value.isEmpty ? 'Description is required' : null;

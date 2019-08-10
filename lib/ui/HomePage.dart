@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               IconButton(
                 icon: Icon(Icons.arrow_back),
-                iconSize: 50,
+                iconSize: 40,
                 color: Colors.white,
                 onPressed: _logoutUser,
               ),
@@ -147,6 +147,24 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 10,),
 
             new Text(description,style:Theme.of(context).textTheme.subhead,textAlign: TextAlign.center),
+
+            ButtonTheme.bar(
+          child: new ButtonBar(
+            //alignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              FlatButton(
+                child: Icon(
+                  Icons.share,
+                  color: Colors.white,
+                ),
+                color: Color.fromRGBO(68, 153, 213, 1.0),
+                shape: CircleBorder(),
+                onPressed: () {},
+              ),
+              
+            ],
+          ),
+        ),
 
             
           ],
